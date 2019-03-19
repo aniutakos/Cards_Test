@@ -1,3 +1,4 @@
+#include <deque>
 #include <string>
 
 using namespace std;
@@ -23,6 +24,7 @@ class Pack
 
 public:  //начало списка публичных 
      Pack();  //конструктор, имя идентично имени класса, возвращаемое значение не задавать, только в public
+     ~Pack();
 
      Card get();
      void Dump();

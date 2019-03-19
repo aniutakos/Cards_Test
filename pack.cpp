@@ -40,6 +40,14 @@ Pack::Pack()  //конструктор, имя идентично имени класса, возвращаемое значение н
 	  //printf ("\nWe got card with value %d and suit %d\n", b1->value, b1->suit);
      }
 
+Pack::~Pack()
+{
+    for (int i=0; i<32; i++)
+    {
+	delete my_deque[i];
+    }
+}
+
 Card Pack::get()
 { 
 	count = count - 1;

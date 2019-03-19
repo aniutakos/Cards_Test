@@ -8,8 +8,8 @@
 
 using namespace std;
 
-string SuitMass [4] = {"\"spade\"", "\"cross\"", "\"diamonds\"", "\"hearts\""};
-string ValueMass [] = {"\"7\"", "\"8\"", "\"9\"","\"10\"","\"jack\"","\"lady\"","\"king\"","\"ace\""};
+const char* SuitMass [4] = {"\"spade\"", "\"cross\"", "\"diamonds\"", "\"hearts\""};
+const char* ValueMass [] = {"\"7\"", "\"8\"", "\"9\"","\"10\"","\"jack\"","\"lady\"","\"king\"","\"ace\""};
 
 Card::Card(CardValue card_value, CardSuit card_suit)
 {
@@ -24,9 +24,9 @@ void Card::Dump()
 
 string Card::getAsString()
 {
-    string  strCard;
-    strCard += "    { \"value\": " + ValueMass [value]  + ", \"suit\": " + SuitMass [suit]  + " }";
-    return strCard;
+    char strCardBuffer[1024];
+    sprintf(strCardBuffer, "    { \"value\": %s, \"suit\": %s }", ValueMass [value], SuitMass [suit]);
+    return strCardBuffer;
 }
 
 ostream &operator<<(ostream &os, Card const &card) 
