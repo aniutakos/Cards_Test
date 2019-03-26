@@ -9,7 +9,7 @@ project(":app").projectdir = file ("/tmp/gradle/.gradle/vcs-1/Cards_Test_dvfs50f
 
 allprojects {
     dependencies {
-        implementation('teoco.games:app') {
+        implementation('teoco.games:gradle') {
 	        version {
         	    branch = 'master'
         	}
@@ -17,5 +17,5 @@ allprojects {
     }
 }
  dependencies {
-	compile project(":app")
+	compile project(":gradle")
 }
