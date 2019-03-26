@@ -4,12 +4,9 @@ apply plugin: 'visual-studio'
 
 group = 'teoco.games'
 
-
-project(":app").projectdir = file ("/tmp/gradle/.gradle/vcs-1/Cards_Test_dvfs50fggv8ny0ogle7mipztz/Cards_Test")
-
 allprojects {
     dependencies {
-        implementation('teoco.games:gradle') {
+        implementation('teoco.games:app') {
 	        version {
         	    branch = 'master'
         	}
@@ -17,5 +14,5 @@ allprojects {
     }
 }
  dependencies {
-	compile project(":gradle")
+	compile project(":app")
 }
