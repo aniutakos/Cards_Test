@@ -6,7 +6,7 @@ group = 'teoco.games'
 
 allprojects {
     dependencies {
-        implementation('teoco.games:app') {
+        implementation('teoco.games:gradle') {
 	        version {
         	    branch = 'master'
         	}
@@ -14,5 +14,5 @@ allprojects {
     }
 }
  dependencies {
-	compile project(":app")
+	compile project(":gradle")
 }
